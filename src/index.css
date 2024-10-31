@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Ringbearer';
+  /* Name your font family */
+  src: url('./assets/Fonts/Ringbearer.TTF');
+  /* Locate the .ttf file within your directory*/
+}
+
+@layer components {
+  body {
+    font-family: "Bai Jamjuree", sans-serif;
+    background-color: #050502;
+    color: white;
+  }
+
+  .container-main {
+    @apply container mx-auto px-5 md:px-10 lg:px-16 xl:px-28 2xl:px-28 max-w-full w-full;
+  }
+
+  .p-font {
+    @apply text-primary-text text-lg font-normal;
+  }
+}
+
+.TopEarners {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+.black {
+ 
+  background-color: #000 !important;
+}
+.stage {
+  -webkit-text-stroke: 1px #000;
+  -webkit-text-fill-color: #DE1E37;
+}
+
+.Tabstoke {
+  -webkit-text-stroke: .2px #000;
+  -webkit-text-fill-color: #DE1E37;
+}
+
+.vertical-timeline::before {
+  width: 0.5px !important;
+}
+.comingsoon {
+  background: linear-gradient(90deg, #301F24 0.84%, #F7F6DA 52.91%, #261419 99.09%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+@media only screen and (min-width: 1170px) {
+  .iconImage {
+    left: 41.3% !important;
+    height: 100% !important;
+    width: 262px !important;
+  }
+
+  .vertical-timeline-element--right .content {
+    margin: 0 0 0 auto;
+  }
+}
+
+.progress-bar-icon:after {
+  content: '';
+  display: block;
+  background-image: url('./assets/images/boult.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  right: -40px;
+  top: -5px;
+}
+
+.timeline::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #C1D7D2;
+  position: absolute;
+  left: 49.872%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .progress-bar-icon:after {
+    top: -11px;
+  }
+}
+
+/* Define the keyframes animation for the marquee effect */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the marquee container */
+.marquee {
+
+  white-space: nowrap;
+}
+
+.marquee-content {
+
+  animation: marquee 20s linear infinite;
+}
